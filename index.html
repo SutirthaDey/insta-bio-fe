@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Free Instagram Bio Generator - Create perfect bios in seconds for fitness, business, travel and more"
+    />
+    <meta
+      name="keywords"
+      content="instagram bio generator, cool bios, bio maker, social media bios"
+    />
+    <title>InstaBioGen - Free AI-Powered Instagram Bio Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "InstaBioGen",
+        "description": "AI-powered Instagram bio generator",
+        "applicationCategory": "SocialMediaTool"
+      }
+    </script>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_MEASUREMENT_ID");
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>✨ InstaBioGen</h1>
+      <p>Create perfect Instagram bios in seconds with AI</p>
+    </header>
+
+    <main>
+      <div class="generator">
+        <textarea
+          id="description"
+          placeholder="Describe yourself (e.g. 'digital marketer who loves coffee')"
+        ></textarea>
+        <select id="vibe">
+          <option value="funny">Funny</option>
+          <option value="professional">Professional</option>
+          <option value="sarcastic">Sarcastic</option>
+          <option value="chill">Chill</option>
+        </select>
+        <button id="generate-btn">Generate Bios</button>
+        <div id="results"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Free tool by InstaBioGen | Updated: <span id="year"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
