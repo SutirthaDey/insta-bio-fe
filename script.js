@@ -1,40 +1,61 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-
-document.getElementById("generate-btn").addEventListener("click", async () => {
-  const description = document.getElementById("description").value.trim();
-  const vibe = document.getElementById("vibe").value;
+document.addEventListener("DOMContentLoaded", () => {
+  const generateBtn = document.getElementById("generate-btn");
   const resultsDiv = document.getElementById("results");
+  const yearSpan = document.getElementById("year");
 
-  if (!description) {
-    resultsDiv.innerHTML = '<p class="error">Please enter a description</p>';
-    return;
-  }
+  // Set current year in footer
+  yearSpan.textContent = new Date().getFullYear();
 
-  resultsDiv.innerHTML = "<p>Generating your bios...</p>";
+  generateBtn.addEventListener("click", async () => {
+    const description = document.getElementById("description").value.trim();
+    const vibe = document.getElementById("vibe").value;
 
-  try {
-    const response = await fetch("http://localhost:3000/generate-bios", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ description, vibe }),
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      resultsDiv.innerHTML = `
-        <h3>Your AI-Generated Bios:</h3>
-        <ul>
-          ${data.bios.map((bio) => `<li>${bio}</li>`).join("")}
-        </ul>
-        <p class="rate-limit">Requests left: ${data.rateLimit.remaining}/${
-        data.rateLimit.limit
-      }</p>
-      `;
-    } else {
-      resultsDiv.innerHTML = `<p class="error">${data.error}</p>`;
+    if (!description) {
+      resultsDiv.innerHTML = `<p class="error">Please enter a description!</p>`;
+      return;
     }
-  } catch (error) {
-    resultsDiv.innerHTML = `<p class="error">Connection failed. Please try again.</p>`;
-  }
+
+    resultsDiv.innerHTML = "⏳ Generating bios...";
+
+    try {
+      const response = await fetch("http://localhost:3000/generate-bios", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ description, vibe }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      resultsDiv.innerHTML = `
+          <h3>✨ Your AI-generated bios:</h3>
+          <ul>
+            ${data.bios
+              .map((bio) => `<li onclick="copyToClipboard(this)">${bio}</li>`)
+              .join("")}
+          </ul>
+          <p style="font-size: 0.85rem; color: #777;">Click a bio to copy it</p>
+        `;
+    } catch (err) {
+      resultsDiv.innerHTML = `<p class="error">❌ ${err.message}</p>`;
+    }
+  });
 });
+
+// Copy to clipboard
+window.copyToClipboard = (el) => {
+  const text = el.textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    el.classList.add("copied");
+    el.textContent = "✅ Copied!";
+    setTimeout(() => {
+      el.classList.remove("copied");
+      el.textContent = text;
+    }, 1500);
+  });
+};

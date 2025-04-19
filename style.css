@@ -1,59 +1,138 @@
+/* Instagram-inspired gradient colors */
 :root {
-  --primary: #405de6;
-  --text: #262626;
+  --insta-gradient-start: #feda75;
+  --insta-gradient-mid1: #fa7e1e;
+  --insta-gradient-mid2: #d62976;
+  --insta-gradient-end: #962fbf;
+  --bg-light: #fffafc;
+  --text-dark: #222;
+  --accent: #e1306c;
 }
 
 body {
   font-family: "Segoe UI", sans-serif;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  color: var(--text);
-}
-
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.generator {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
-textarea,
-select {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
-}
-
-button {
-  background: var(--primary);
+/* Add this or modify your existing header section */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
   color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-#results {
-  margin-top: 2rem;
   min-height: 200px;
 }
 
-footer {
-  text-align: center;
-  margin-top: 3rem;
-  color: #8e8e8e;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 15px;
-  }
+header p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+main {
+  padding: 2rem;
+  flex: 1;
+}
+
+.generator {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+select,
+button {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c91e58;
+}
+
+#results {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+#results ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#results li {
+  background: #fff;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+#results li:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.02);
+}
+
+#results li.copied {
+  background: #4caf50 !important;
+  color: white;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #eee;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: auto;
 }
