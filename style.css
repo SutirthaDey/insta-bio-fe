@@ -7,6 +7,7 @@
   --bg-light: #fffafc;
   --text-dark: #222;
   --accent: #e1306c;
+  --accent-dark: #b3004b; /* darker pink for better contrast */
 }
 
 body {
@@ -19,6 +20,19 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+}
+
+/* Screen-reader-only class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Header section */
@@ -166,13 +180,13 @@ footer {
 
 .footer-nav a {
   text-decoration: none;
-  color: #e1306c;
+  color: var(--accent-dark); /* updated for better contrast */
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .footer-nav a:hover {
-  color: #c91e58;
+  color: #8a0040;
   text-decoration: underline;
 }
 
