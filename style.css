@@ -6,8 +6,8 @@
   --insta-gradient-end: #962fbf;
   --bg-light: #fffafc;
   --text-dark: #222;
-  --accent: #e1306c;
-  --accent-dark: #b3004b; /* darker pink for better contrast */
+  --accent: #b0004d; /* Darker pink for better contrast */
+  --accent-dark: #8a0040; /* Also updated for consistency */
 }
 
 body {
@@ -107,13 +107,13 @@ button {
 
 button {
   background: var(--accent);
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   cursor: pointer;
 }
 
 button:hover {
-  background: #c91e58;
+  background: #8a0039; /* darker for hover */
 }
 
 #results {
@@ -180,13 +180,13 @@ footer {
 
 .footer-nav a {
   text-decoration: none;
-  color: var(--accent-dark); /* updated for better contrast */
+  color: var(--accent-dark);
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .footer-nav a:hover {
-  color: #8a0040;
+  color: #700030;
   text-decoration: underline;
 }
 
