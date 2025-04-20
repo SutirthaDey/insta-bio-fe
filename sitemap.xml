@@ -1,46 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Home Page -->
-  <url>
-    <loc>https://instabiogen.com/</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <!-- About Page -->
-  <url>
-    <loc>https://instabiogen.com/about.html</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
-  <!-- Privacy Policy -->
-  <url>
-    <loc>https://instabiogen.com/privacy.html</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://www.instabiogen.com/</loc>
+  <lastmod>2025-04-20T07:12:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.instabiogen.com/about.html</loc>
+  <lastmod>2025-04-20T07:12:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.instabiogen.com/privacy.html</loc>
+  <lastmod>2025-04-20T07:12:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.instabiogen.com/terms.html</loc>
+  <lastmod>2025-04-20T07:12:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.instabiogen.com/contact.html</loc>
+  <lastmod>2025-04-20T07:12:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
-  <!-- Terms of Service -->
-  <url>
-    <loc>https://instabiogen.com/terms.html</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
-  <!-- Contact Page -->
-  <url>
-    <loc>https://instabiogen.com/contact.html</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Other pages you may already have -->
-  
 </urlset>
