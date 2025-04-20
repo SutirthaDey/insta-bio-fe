@@ -1,3 +1,21 @@
 User-agent: *
 Allow: /
+
+# Sitemap location
 Sitemap: https://instabiogen.com/sitemap.xml
+
+# Block any admin or login pages (example, modify as necessary)
+Disallow: /admin/
+Disallow: /login/
+
+# Optional: Allow crawling for specific pages
+Allow: /about.html
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /contact.html
+
+# Make sure to allow everything else by default
+Allow: /index.html
+Allow: /images/
+Allow: /css/
+Allow: /js/

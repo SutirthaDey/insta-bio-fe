@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | InstaBioGen</title>
+    <meta
+      name="description"
+      content="Get in touch with the InstaBioGen team for questions or feedback."
+    />
+    <link rel="canonical" href="https://instabiogen.com/contact.html" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you!</p>
+    </header>
+
+    <main class="generator">
+      <h2>Have feedback or ideas?</h2>
+      <p>Drop us a line! You can email us at:</p>
+
+      <p style="font-size: 1.1rem; font-weight: bold">
+        📧
+        <a href="mailto:support@instabiogen.com">reach.instabiogen@gmail.com</a>
+      </p>
+
+      <p>We typically respond within 24–48 hours.</p>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>Free tool by InstaBioGen | Updated: <span id="year"></span></p>
+        <nav class="footer-nav">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -18,9 +18,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
-/* Add this or modify your existing header section */
+/* Header section */
 header {
   display: flex;
   flex-direction: column;
@@ -30,11 +31,10 @@ header {
   text-align: center;
   background: linear-gradient(
     135deg,
-    #feda75,
-    #fa7e1e,
-    #d62976,
-    #962fbf,
-    #4f5bd5
+    var(--insta-gradient-start),
+    var(--insta-gradient-mid1),
+    var(--insta-gradient-mid2),
+    var(--insta-gradient-end)
   );
   color: white;
   min-height: 200px;
@@ -49,15 +49,17 @@ header h1 {
 header p {
   font-size: 1.2rem;
   margin: 0;
+  font-weight: 400;
 }
 
+/* Main content area */
 main {
   padding: 2rem;
   flex: 1;
 }
 
 .generator {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -70,6 +72,12 @@ textarea {
   border: 2px solid #ccc;
   border-radius: 5px;
   resize: none;
+  transition: border-color 0.3s;
+}
+
+textarea:focus {
+  border-color: var(--accent);
+  outline: none;
 }
 
 select,
@@ -80,6 +88,7 @@ button {
   width: 100%;
   border-radius: 5px;
   border: none;
+  transition: background-color 0.3s;
 }
 
 button {
@@ -130,10 +139,92 @@ button:hover {
   font-weight: bold;
 }
 
+/* Footer section */
 footer {
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #eee;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-align: center;
   margin-top: auto;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #e1306c;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #c91e58;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  .generator {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  textarea {
+    height: 100px;
+    font-size: 1.2rem;
+  }
+
+  select,
+  button {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .generator {
+    padding: 1rem;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
