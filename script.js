@@ -18,13 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
     resultsDiv.innerHTML = "⏳ Generating bios...";
 
     try {
-      const response = await fetch("http://localhost:3000/generate-bios", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ description, vibe }),
-      });
+      const response = await fetch(
+        "https://api.instabiogen.com/generate-bios",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ description, vibe }),
+        }
+      );
 
       const data = await response.json();
 
