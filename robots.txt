@@ -13,6 +13,10 @@ Allow: /about.html
 Allow: /privacy.html
 Allow: /terms.html
 Allow: /contact.html
+Allow: /funny.html
+Allow: /bible.html
+
+
 
 # Make sure to allow everything else by default
 Allow: /index.html

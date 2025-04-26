@@ -6,11 +6,20 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://www.instabiogen.com/</loc>
   <lastmod>2025-04-20T07:12:26+00:00</lastmod>
   <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.instabiogen.com/funny.html</loc>
+  <lastmod>2025-04-27T07:12:30+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.instabiogen.com/bible.html</loc>
+  <lastmod>2025-04-27T07:12:30+00:00</lastmod>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.instabiogen.com/about.html</loc>
@@ -32,6 +41,5 @@
   <lastmod>2025-04-20T07:12:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 </urlset>
