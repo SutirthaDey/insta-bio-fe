@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   generateBtn.addEventListener("click", async () => {
     const description = document.getElementById("description").value.trim();
     const vibe = document.getElementById("vibe").value;
+    const type = document.getElementById("category").value;
 
     if (!description) {
       resultsDiv.innerHTML = `<p class="error">Please enter a description!</p>`;
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ description, vibe }),
+          body: JSON.stringify({ description, vibe, type }),
         }
       );
 
