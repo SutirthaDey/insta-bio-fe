@@ -49,12 +49,16 @@
 
     <main>
       <div class="generator">
+        <h2>Generate Your Funny Bio</h2>
+        <!-- Added this heading -->
+
         <input type="hidden" id="category" value="funny" />
 
         <textarea
           id="description"
           placeholder="Describe yourself (e.g. 'sarcastic, coffee-lover, meme enthusiast')"
         ></textarea>
+
         <label for="vibe" class="sr-only">Choose tone</label>
         <select id="vibe">
           <option value="funny" selected>Funny</option>
@@ -63,9 +67,12 @@
           <option value="chill">Chill</option>
           <option value="sad">Sad</option>
         </select>
+
         <button id="generate-btn">Generate Funny Bios</button>
+
         <div id="results">
-          <h3>Examples of Funny Instagram Bios:</h3>
+          <h2>Examples of Funny Instagram Bios:</h2>
+          <!-- Changed from h3 to h2 -->
           <ul>
             <li>“I’m not arguing, I’m just explaining why I’m right.”</li>
             <li>“I’m on a seafood diet. I see food and I eat it.”</li>
