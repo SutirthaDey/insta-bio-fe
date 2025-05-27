@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await fetch(
-        "https://api.instabiogen.com/generate-bios",
+        "https://insta-bio-be.onrender.com/generate-bios",
         {
           method: "POST",
           headers: {
